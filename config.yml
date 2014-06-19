@@ -1,0 +1,20 @@
+common:
+  standalone: true
+  cache_lru:
+    host: 127.0.0.1
+    port: 6379
+
+gcs: &gcs
+  storage: gcs
+  storage_path: /registry
+  boto_bucket: _env:GCS_BUCKET
+  gs_secure: true
+  gs_access_key: _env:GCS_KEY
+  gs_secret_key: _env:GCS_SECRET
+
+local: &local
+  storage: local
+  storage_path: /tmp/registry
+
+dev:
+  <<: *gcs

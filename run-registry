@@ -1,0 +1,10 @@
+#!/bin/bash
+exec 2>&1
+
+exec gunicorn \
+    -k gevent \
+    -b 127.0.0.1:5000 \
+    -w 4 \
+    --access-logfile - \
+    --error-logfile - \
+    docker_registry.wsgi:application

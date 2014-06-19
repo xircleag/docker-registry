@@ -1,0 +1,6 @@
+#!/bin/bash
+exec 2>&1
+
+exec /usr/bin/redis-server \
+    --maxmemory 100mb \
+    --maxmemory-policy allkeys-lru

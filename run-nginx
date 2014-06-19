@@ -1,0 +1,5 @@
+#!/bin/bash
+exec 2>&1
+
+sed -i -e "s,%%REGISTRY_HOSTNAME%%,$REGISTRY_HOSTNAME," /etc/nginx/nginx.conf
+exec /usr/sbin/nginx -c /etc/nginx/nginx.conf
