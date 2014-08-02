@@ -34,7 +34,7 @@ RUN rm -rf /etc/nginx/conf.d/
 ADD nginx.conf /etc/nginx/
 ADD run-nginx /etc/service/nginx/run
 
-# Disable cron and syslog
+# Disable cron sshd syslog
 RUN rm /etc/my_init.d/00_regen_ssh_host_keys.sh
 RUN touch /etc/service/cron/down /etc/service/sshd/down /etc/service/syslog-ng/down
 
