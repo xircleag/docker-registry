@@ -4,7 +4,6 @@ RUN printf 'APT::Get::Assume-Yes "true";\nAPT::Install-Recommends "false";\n' > 
 
 # Add nginx repository
 RUN echo "deb http://nginx.org/packages/ubuntu/ trusty nginx" > /etc/apt/sources.list.d/nginx.list
-RUN apt-get install curl
 RUN curl --silent -L http://nginx.org/keys/nginx_signing.key | apt-key add -
 RUN apt-get update
 
