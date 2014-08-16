@@ -1,8 +1,5 @@
 FROM phusion/baseimage:0.9.11
 
-# https://github.com/docker/docker/issues/6345
-RUN alias adduser='useradd'
-
 RUN printf 'APT::Get::Assume-Yes "true";\nAPT::Install-Recommends "false";\n' > /etc/apt/apt.conf.d/99-defaults
 
 # Add nginx repository
