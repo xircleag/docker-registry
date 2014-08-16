@@ -29,5 +29,4 @@ RUN rm /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 ADD image-files /
 
-ENV HOME /root
-ENTRYPOINT ["/sbin/my_init"]
+CMD ["/sbin/my_init"]
