@@ -29,7 +29,7 @@ ADD run-redis /etc/service/redis/run
 
 # nginx
 RUN apt-get install openssl libssl1.0.0
-RUN apt-get install nginx=1.6.0-1~trusty
+RUN apt-get install nginx=1.6.1-1~trusty
 RUN rm -rf /etc/nginx/conf.d/
 ADD nginx.conf /etc/nginx/
 ADD run-nginx /etc/service/nginx/run
