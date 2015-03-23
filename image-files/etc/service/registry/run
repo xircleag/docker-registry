@@ -1,6 +1,8 @@
 #!/bin/bash
 exec 2>&1
 
+export TIMEOUT=120
+
 exec gunicorn \
     -k gevent \
     -b 127.0.0.1:5000 \
