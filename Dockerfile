@@ -5,7 +5,7 @@ RUN \
     echo "deb http://nginx.org/packages/ubuntu/ trusty nginx" > /etc/apt/sources.list.d/nginx.list && \
     curl --silent -L http://nginx.org/keys/nginx_signing.key | apt-key add - && \
     apt-get update && \
-    apt-get install openssl libssl1.0.0 nginx=1.6.1-1~trusty && \
+    apt-get install libssl-dev>=1.0.1f openssl>=1.0.1f nginx=1.6.2-1~trusty && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /var/cache/*
 
 # Order matters: after nginx install, before docker-registry install.
