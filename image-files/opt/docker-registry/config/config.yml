@@ -3,6 +3,8 @@ common:
   cache_lru:
     host: 127.0.0.1
     port: 6379
+  search_backend: sqlalchemy
+  sqlalchemy_index_database: sqlite:////opt/docker-registry/data/docker-registry.db
 
 gcs: &gcs
   storage: gcs
